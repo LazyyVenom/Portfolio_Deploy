@@ -369,7 +369,7 @@
                     <h1 class="display-2 fw-normal text-center font-weight-bold header-text">Strengths And Skills</h1>
                 </header>
                 <div class="rows">
-                    <div id="container" style="height: 40rem;"></div>
+                    <div id="container" style="height: 35rem;"></div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -801,13 +801,14 @@
         <script>
             anychart.onDocumentReady(function () {
                 var data = [
-                  ["Strength", 8],
-                  ["Dexterity", 14],
-                  ["Concentration", 14],
-                  ["Intelligence", 15],
-                  ["Wisdom", 12],
-                  ["Charisma", 8],
-                  ["Chota", 12]
+                  ["Communication", 14],
+                  ["Ability to Learn", 15],
+                  ["Programming", 15],
+                  ["Data Related Work", 13],
+                  ["Artificial Intelligence", 11],
+                  ["Automation", 14],
+                  ["Web Development", 12],
+                  ["Computer Related Work", 13]
                 ];
             
                 // create a chart
@@ -821,14 +822,19 @@
             
                 // enable sorting points by x
                 chart.sortPointsByX(true);
-            
-                series.normal().fill("#ff5757", 0.3);
-                series.hovered().fill("#ff5757", 0.1);
-                series.selected().fill("#ff5757", 0.5);
+                series.name("Anubhav Choubey");
+                series.normal().fill("#ff5757", 0.4);
+                series.hovered().fill("#ff5757", 0.3);
+                series.selected().fill("#ff5757", 0.6);
                 series.normal().stroke("#ff5757", 1, "10 5", "round");
                 series.hovered().stroke("#ff5757", 2, "10 5", "round");
                 series.selected().stroke("#ff5757", 4, "10 5", "round");
               
+                chart.background().fill("transparent");
+
+                // set the text color and weight for the labels
+                series.labels().fontColor("#ff5757").fontWeight("bold");
+
                 // set the inner radius
                 chart.innerRadius(50);
             
