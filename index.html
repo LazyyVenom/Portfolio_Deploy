@@ -801,88 +801,45 @@
         <script>
             anychart.onDocumentReady(function () {
                 var data = [
-                    ["Strength", 8],
-                    ["Dexterity", 14],
-                    ["Concentration", 14],
-                    ["Intelligence", 15],
-                    ["Wisdom", 12],
-                    ["Charisma", 8],
-                    ["Chota", 12]
+                  ["Strength", 8],
+                  ["Dexterity", 14],
+                  ["Concentration", 14],
+                  ["Intelligence", 15],
+                  ["Wisdom", 12],
+                  ["Charisma", 8],
+                  ["Chota", 12]
                 ];
-
+            
                 // create a chart
                 var chart = anychart.polar();
-
+            
                 // create a polygon series and set the data
                 var series = chart.polygon(data);
-
+            
                 // set the type of the x-scale
                 chart.xScale("ordinal");
-
+            
                 // enable sorting points by x
                 chart.sortPointsByX(true);
-
-                // set the inner radius
-                chart.innerRadius(50);
-
-                var chart = anychart.polar();
-
-                // create a series and set the data
-                var series = chart.polygon(data);
-                series.name("Anubhav Choubey");
-
-                // configure the visual settings of the series
+            
                 series.normal().fill("#ff5757", 0.3);
                 series.hovered().fill("#ff5757", 0.1);
                 series.selected().fill("#ff5757", 0.5);
-
-                chart.background().fill("transparent");
-
-                series.labels().fontWeight("bold");
-
+                series.normal().stroke("#ff5757", 1, "10 5", "round");
+                series.hovered().stroke("#ff5757", 2, "10 5", "round");
+                series.selected().stroke("#ff5757", 4, "10 5", "round");
+              
+                // set the inner radius
+                chart.innerRadius(50);
+            
                 // set the container id
                 chart.container("container");
-
+            
                 // initiate drawing the chart
                 chart.draw();
             });
         </script>
-
-        <script>
-            function scrollToSection(sectionId) {
-                var section = document.getElementById(sectionId);
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                    setActiveNavLink(sectionId);
-                }
-            }
-
-            function setActiveNavLink(sectionId) {
-                var navLinks = document.querySelectorAll('.nav-link');
-                navLinks.forEach(function (link) {
-                    if (link.getAttribute('onclick').includes(sectionId)) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            }
-            window.addEventListener('load', function () {
-                var introElement = document.getElementById('intro');
-                if (introElement) {
-                    introElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        </script>
-        <script>
-            // Initialize Bootstrap Carousel
-            document.addEventListener("DOMContentLoaded", function () {
-                var carousels = document.querySelectorAll('[data-mdb-carousel-init]');
-                carousels.forEach(function (carousel) {
-                    new mdb.Carousel(carousel);
-                });
-            });
-        </script>
+        
 </body>
 
 </html>
