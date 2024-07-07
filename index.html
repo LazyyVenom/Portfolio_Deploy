@@ -859,6 +859,42 @@
                 chart.draw();
             });
         </script>
+
+        <script>
+            function scrollToSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    setActiveNavLink(sectionId);
+                }
+            }
+
+            function setActiveNavLink(sectionId) {
+                var navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(function (link) {
+                    if (link.getAttribute('onclick').includes(sectionId)) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+            window.addEventListener('load', function () {
+                var introElement = document.getElementById('intro');
+                if (introElement) {
+                    introElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        </script>
+        <script>
+            // Initialize Bootstrap Carousel
+            document.addEventListener("DOMContentLoaded", function () {
+                var carousels = document.querySelectorAll('[data-mdb-carousel-init]');
+                carousels.forEach(function (carousel) {
+                    new mdb.Carousel(carousel);
+                });
+            });
+        </script>
         
 </body>
 
