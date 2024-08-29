@@ -1,901 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anubhav Choubey</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-        }
-
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        .nav-link {
-            transition: color 0.3s ease-in-out;
-            color: #ffffff;
-        }
-
-        .nav-link:visited {
-            color: rgb(255, 255, 255);
-        }
-
-        .nav-link:hover {
-            color: #ff6b6b;
-        }
-
-        .card {
-            transition: transform 0.3s ease-in-out;
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .header-text {
-            animation: slideInFromLeft 1s ease-out forwards;
-            color: #ffffff;
-        }
-
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        h2 {
-            animation: fadeIn 1s ease-out forwards;
-            color: #ffffff;
-        }
-
-        h1 {
-            animation: fadeIn 1s ease-out forwards;
-            color: #ffffff;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .py-5 {
-            background-color: #000000;
-            color: #ffffff;
-        }
-
-        .text-body-emphasis {
-            color: #ff6b6b;
-        }
-
-        .border-top {
-            border-color: #ffffff;
-        }
-
-        .link-secondary {
-            color: #ffffff;
-        }
-
-        .container {
-            padding: 0 20px;
-        }
-
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-        }
-
-        .good-text {
-            font-size: 1.3rem;
-        }
-
-        .skills-text {
-            font-size: 1.5rem;
-        }
-
-        .stronger {
-            font-weight: 400;
-            color: #ff8c8c;
-        }
-
-        .pro-color {
-            background-color: #ff8c8c !important;
-            color: #ff8c8c;
-        }
-
-        .pro-color-2 {
-            background-color: #ff5757 !important;
-            color: #ff8c8c;
-        }
-
-        .pro-color-3 {
-            background-color: #ffc4c4 !important;
-            color: #ff8c8c;
-        }
-
-        .bigger-badge {
-            font-size: 20px;
-            /* Adjust the font size as needed */
-            padding: 15px 15px;
-            /* Adjust the padding as needed */
-        }
-    </style>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/jack_page.css">
+    <link rel="stylesheet" href="static/css/golden_card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <header
-            class="sticky-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <div class="col-md-3 mb-2 mb-md-0">
+    <div class="background"></div>
+    <img src="static/images/ace.png" class="ace">
+    <img src="static/images/card_back.png" class="card_back">
+    <div class="main_container">
+        <div class="upper_container">
+            <a href="https://github.com/LazyyVenom">
+                <div class="locator"><i class="fa-brands fa-github"></i></div>
+            </a>
+            <a href="https://www.linkedin.com/in/anubhav-choubey/">
+                <div class="locator"><i class="fa-brands fa-linkedin"></i></div>
+            </a>
+            <a href="mailto:choubey.anubhav253@gmail.com">
+                <div class="locator"><i class="fa fa-envelope"></i></div>
+            </a>
+            <a href="https://www.kaggle.com/choubeyanubhav">
+                <div class="locator"><i class="fa-brands fa-kaggle"></i></div>
+            </a>
+            <a href="static/cv.pdf">
+                <div class="locator"><i class="fa-regular fa-file"></i></div>
+            </a>
+        </div>
+        <div class="heading_container">
+            <h1 class="heading">
+                ANUBHAV
+            </h1>
+            <h1 class="heading_stroked">
+                CHOUBEY
+            </h1>
+        </div>
+        <div class="lower_container">
+            <div class="cards pattern" id="jack_cards_trigger">
+                <span class="card_label">JACK OF ALL TRADES</span>
             </div>
-
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 " onclick="scrollToSection('intro')">Introduction</a></li>
-                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('about')">About</a></li>
-                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('skills')">Skills</a></li>
-                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('projects')">Projects</a></li>
-                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('contact')">Contact Me</a></li>
-                <li><a href="static/cv.pdf" class="nav-link px-2">Download Resume</a></li>
-            </ul>
-
-            <div class="col-md-3 text-end">
+            <div class="golden_card" id="golden_card">
+                <span class="card_label">TRYING TO MASTER ONE</span>
             </div>
-        </header>
+        </div>
     </div>
-
-    <div id="intro"
-        style="height: 800px; position: relative; display: flex; justify-content: center; align-items: center;">
-        <div class="background-image"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('static/images/intro.jpg'); background-size: cover; background-position: center; filter: blur(3px);">
-
+    <div class="golden_card_screen" id="golden_card_screen">
+        <div class="big_golden_card" id="big_golden_card">
         </div>
-        <div class="container" style="position: relative; z-index: 1; text-align: center;">
-            <h1 class="display-1 fw-normal text-center font-weight-bold header-text">ANUBHAV CHOUBEY</h1>
-            <h2 class="display-5 text-center font-weight-bold header-text">Python | Data Science | Machine Learning
-                |<br>
-                Artificial Intelligence | Flask</h2>
+        <div class="big_golden_card_flip">
+            <div class="skills_heading_golden">
+                Data Science
+            </div>
+            <i class="fa-solid fa-brain icon_golden"></i>
+            <div class="skills_details_golden">
+                Python, Data Science, ML, DL and Artificial Intelligence
+            </div>
         </div>
     </div>
-
-    <hr>
-
-    <div id="about" class="py-5">
-        <div class="container">
-            <header class="text-center mb-5">
-                <h1 class="display-2 fw-normal text-center font-weight-bold header-text">About Me</h1>
-            </header>
-            <hr>
-            <div class="row">
-                <p class="good-text">
-                    I'm Anubhav Choubey, currently pursuing my B.Tech in AI and Data Science at JEC Jabalpur. Alongside
-                    my studies, I'm actively engaged in part-time freelancing, gaining valuable hands-on experience by
-                    working on real-life projects. Join me as I bridge theory with practical application in the exciting
-                    realm of AI and data science. </p>
-            </div>
-            <hr>
-            <div class="row">
-                <h1 class="display-5 stronger bold">Education</h1>
-                <p class="good-text">Kendriya Vidyalaya Class 12th (2022) - <span
-                        class="badge rounded-pill text-bg-light">92.2%</span><br>
-                    Jabalpur Engineering College B.Tech in AI and Data Science (2022-2026) - <span
-                        class="badge rounded-pill text-bg-light">8.35 CGPA</span>
-                </p>
-            </div>
-            <hr>
-            <div class="row">
-                <h1 class="display-5 stronger bold">Certificates</h1>
-                <p class="good-text">Introduction to Artificial Intelligence (AI) - <a
-                        href="https://www.coursera.org/account/accomplishments/records/8KRUMNNYWG9R"><span
-                            class="badge rounded-pill text-bg-light">8KRUMNNYWG9R</span></a><br>
-                    Crash Course on Python - <a
-                        href="https://www.coursera.org/account/accomplishments/records/CS5E46XXJKD9"><span
-                            class="badge rounded-pill text-bg-light">CS5E46XXJKD9</span></a><br>
-                    Technical Support Fundamentals - <a
-                        href="https://www.coursera.org/account/accomplishments/records/K8RF3BCW9A7E"><span
-                            class="badge rounded-pill text-bg-light">K8RF3BCW9A7E</span></a><br>
-                    Supervised Machine Learning: Regression and Classification - <a
-                        href="https://www.coursera.org/account/accomplishments/records/MH99MVAJZPNX"><span
-                            class="badge rounded-pill text-bg-light">MH99MVAJZPNX</span></a><br>
-                    Foundations of Cybersecurity - <a
-                        href="https://www.coursera.org/account/accomplishments/records/H5RX9ZTLZFGJ"><span
-                            class="badge rounded-pill text-bg-light">H5RX9ZTLZFGJ</span></a><br>
-                    Learning How to Learn: Powerful mental tools to help you master tough subjects - <a
-                        href="https://www.coursera.org/account/accomplishments/records/LGVXUULL73DD"><span
-                            class="badge rounded-pill text-bg-light">LGVXUULL73DD</span></a><br>
-                    Fundamentals of Graphic Design - <a
-                        href="https://www.coursera.org/account/accomplishments/records/FPYZY93U9GZW"><span
-                            class="badge rounded-pill text-bg-light">FPYZY93U9GZW</span></a><br>
-                    Introduction to Typography - <a
-                        href="https://www.coursera.org/account/accomplishments/records/T4MDYNLQLWMZ"><span
-                            class="badge rounded-pill text-bg-light">T4MDYNLQLWMZ</span></a>
-                </p>
-            </div>
-            <hr>
-            <div class="row">
-                <h1 class="display-5 stronger bold">Hobbies</h1>
-                <p class="good-text">
-                    Chess, Youtube Videos Creation, Book Reading
-                </p>
-            </div>
-            <hr>
-            <div class="row">
-                <h1 class="display-5 stronger bold">Experience</h1>
-                <p class="good-text"><b>Data Science Intern - Astute Lex Servicado (May 2024 - June 2024)</b><br>
-                    <ul>
-                        <li>
-                            Developed and maintained Django backend using Python for "Lexi AI".
-                        </li>
-                        <li>
-                            Enhanced website efficiency by restructuring the database.
-                        </li>
-                        <li>
-                            Database Management.
-                        </li>
-                        <li>
-                            Integrated Chat GPT API, implementing functional prompts to incorporate essential AI features.
-                        </li>
-                    </ul>
-                </p>
-                <p class="good-text"><b>Freelancer (September 2023 - Present) - </b>
-                    <a href="https://www.freelancer.com/u/choubeyanubhav"><span
-                            class="badge rounded-pill text-bg-light">Profile</span></a><br>
-                    I've successfully completed more than 20 industry-based projects, earning a stellar 5-star profile
-                    adorned with glowing reviews from over 8 satisfied clients. Check some Reviews Below.
-                </p>
-            </div>
-            <hr>
-            <div class="row">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Neural Network for Facial Feature Detection</h5>
-                                    <p class="card-text">I recommend him for the professionalism and hard work.
-                                        Anubhav<br>
-                                        had worked really well and fast, which made it convenient for me. I am very<br>
-                                        happy and satisfied with how it turned out.</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37598218&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Python Frontend Development Urgently Needed</h5>
-                                    <p class="card-text">Anubhav's expertise in Python and attention to detail were<br>
-                                        evident throughout our project. He effectively implemented the design,
-                                        ensuring<br>
-                                        a seamless and user-friendly experience. His communication was excellent,<br>
-                                        keeping me updated and addressing concerns promptly. I highly recommend
-                                        Anubhav<br>
-                                        for frontend projects.</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37796730&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Python script</h5>
-                                    <p class="card-text">Good communication and understood the requirements qucikly.<br>
-                                        Code was well structued and I wish Anubhav all the best on this platform
-                                        with<br>
-                                        future projects.</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37597213&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Selenium Automation for Multi-Browser Compatibility</h5>
-                                    <p class="card-text">A very good professional and talented work , wish to work again
-                                        with him</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37648009&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">HTML, Python, SQL Tasks -- 2</h5>
-                                    <p class="card-text">Had a project that he helped with, Top service!!</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37566788&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Data analysis with python panda flask helping not paid</h5>
-                                    <p class="card-text">I had the privilege of collaborating with Anubhav, and<br>
-                                        Anubhav’s professionalism, attention to detail, and commitment to delivering<br>
-                                        top-notch results make him a standout freelancer. He not only met deadlines
-                                        but<br>
-                                        exceeded expectations, consistently demonstrating a deep understanding of
-                                        the<br>
-                                        project’s intricacies. Anubhav’s problem-solving skills and effective<br>
-                                        communication further elevated our collaboration. I highly recommend Anubhav
-                                        for<br>
-                                        any project and look forward to future partnerships.</p>
-                                    <a
-                                        href="https://www.freelancer.com/u/choubeyanubhav?review_context_id=37215444&review_type=project&reviewee_role=freelancer&sb=t"><span
-                                            class="badge rounded-pill text-bg-light">Verify</span></a>
-                                </div>
-                            </div>
-                        </div>
+    <div class="jack_of_all_trades" id="jack_cards">
+        <div class="card card_1">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Front End
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-        <hr>
-
-        <div id="skills" class="py-5">
-            <div class="container">
-                <header class="text-center mb-5">
-                    <h1 class="display-2 fw-normal text-center font-weight-bold header-text">Strengths And Skills</h1>
-                </header>
-                <div class="rows">
-                    <div id="container" style="height: 35rem;"></div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="skills-text">
-                            Python
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-danger pro-color-2" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Automation (Selenium)
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-warning pro-color" style="width: 93%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Communication Skills
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar pro-color-3" style="width: 91%"></div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p class="skills-text">
-                            SQL
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-danger pro-color-2" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Data Analysis
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-warning pro-color" style="width: 84%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Computer Basics
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar pro-color-3" style="width: 86%"></div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p class="skills-text">
-                            Machine Learning
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-danger pro-color-2" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            HTML,CSS,Flask
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-warning pro-color" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Git & GitHub
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar pro-color-3" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p class="skills-text">
-                            Deep Learning
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-danger pro-color-2" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Data Engineering
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-warning pro-color" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Pandas & Libraries
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar pro-color-3" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p class="skills-text">
-                            Artificial Intelligence
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-danger pro-color-2" style="width: 76%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Computer Vision & NLP
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar bg-warning pro-color" style="width: 89%"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <p class="skills-text">
-                            Fast Learner
-                        </p>
-                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuemin="0"
-                            aria-valuemax="100">
-                            <div class="progress-bar pro-color-3" style="width: 90%"></div>
-                        </div>
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <div class="skill_details">
+                        HTML, CSS, JavaScript
                     </div>
                 </div>
             </div>
         </div>
-
-        <hr>
-
-        <div id="projects" class="py-3">
-            <div class="container py-3">
-                <header>
-                    <div class="projects-header p-3 pb-md-4 mx-auto text-center">
-                        <h1 class="display-2 fw-normal text-center font-weight-bold header-text">Projects</h1>
+        <div class="card card_2">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Back End
                     </div>
-                </header>
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">JEC Result Scrapper</h5>
-                                    <p class="card-text">
-                                        Developed an advanced automated results retrieval system leveraging Selenium
-                                        to<br>
-                                        gather comprehensive academic performance data for all students enrolled in
-                                        my<br>
-                                        college. It solves captcha and generates and checks for more roll numbers
-                                        itself.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span> <span
-                                            class="badge rounded-pill text-bg-light">Selenium - Automation</span> <span
-                                            class="badge rounded-pill text-bg-light">Data Engineering</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/Generate-Result-list">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Biased Dice</h5>
-                                    <p class="card-text">
-                                        Biased-Dice is a Python program that simulates a dice roll with a graphical
-                                        user<br>
-                                        interface (GUI) built using Tkinter. It includes features like saving outputs
-                                        in<br>
-                                        a text file and the option to set one value of the dice to be biased with a
-                                        1/2<br>
-                                        probability.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/Biased-Dice">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sentiment Analysis</h5>
-                                    <p class="card-text">
-                                        Sentiment-Analysis is a project aimed at analyzing the sentiment of captions and
-                                        <br>
-                                        images, specifically targeting Instagram posts and reels, as well as YouTube<br>
-                                        videos.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">Deep Learning</span>
-                                        <span class="badge rounded-pill text-bg-light">Computer Vision</span>
-                                        <span class="badge rounded-pill text-bg-light">NLP</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/Sentiment-Analysis">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Py-Game Prisoner's Dilemma</h5>
-                                    <p class="card-text">
-                                        Creating My First Ever Python based Tournament Game. To recreate a previous<br>
-                                        experiment but by coding all the Algorithms.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">OOPS</span>
-                                        <span class="badge rounded-pill text-bg-light">Py-Game</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/py-game-theory">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Virtual Assistant</h5>
-                                    <p class="card-text">
-                                        Creating a Virtual Assistant with gestures control using OpenCV Python
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">OOPS</span>
-                                        <span class="badge rounded-pill text-bg-light">OpenCV</span>
-                                        <span class="badge rounded-pill text-bg-light">Computer Vision</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/Virtual_Assistant">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Portfolio Website</h5>
-                                    <p class="card-text">
-                                        Looking at it.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">Flask</span>
-                                        <span class="badge rounded-pill text-bg-light">HTML</span>
-                                        <span class="badge rounded-pill text-bg-light">CSS</span>
-                                    </p>
-                                    <a href="https://github.com/LazyyVenom/Anubhav_Portfolio">
-                                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">LeXi AI Frontend</h5>
-                                    <p class="card-text">
-                                        Created Frontend and basic backend for a law based AI company creating
-                                        contracts<br>
-                                        using AI and also much more features like contract correction and clause AI.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">Flask</span>
-                                        <span class="badge rounded-pill text-bg-light">HTML</span>
-                                        <span class="badge rounded-pill text-bg-light">CSS</span>
-                                        <span class="badge rounded-pill text-bg-light">Prompt Engineering</span>
-                                        <span class="badge rounded-pill text-bg-light">Chat GPT</span>
-                                    </p>
-                                    <a href="not_in_github.html">
-                                        <span class="badge bigger-badge rounded-pill text-bg-danger">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title">Python PDF to Excel Automation</h5>
-                                    <p class="card-text">
-                                        Created a python script in multiple part involving automating PDFs downloading
-                                        <br>
-                                        by passing a captcha code and then processing PDFs into usable image <br>
-                                        and the processing it using tesseract OCR and Google OCR and taking relevant
-                                        <br>
-                                        information from the text and paste it to excel files.
-                                        <br>
-                                        <br>
-                                        Skills: <span class="badge rounded-pill text-bg-light">Python</span>
-                                        <span class="badge rounded-pill text-bg-light">Selenium</span>
-                                        <span class="badge rounded-pill text-bg-light">Data Engineering</span>
-                                        <span class="badge rounded-pill text-bg-light">Scraping</span>
-                                        <span class="badge rounded-pill text-bg-light">Python Scripting</span>
-                                    </p>
-                                    <a href="not_in_github.html">
-                                        <span class="badge bigger-badge rounded-pill text-bg-danger">
-                                            <img src="static/images/github.svg" style="width: 30px; height:30px;"
-                                                alt="GitHub Icon">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <i class="fa-solid fa-code icon"></i>
+                    <div class="skill_details">
+                        Django, Flask
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
-
-        <hr>
-
-        <div id="contact" class="py-5">
-            <div class="container">
-                <header>
-                    <div class="projects-header p-3 pb-md-4 mx-auto text-center">
-                        <h1 class="display-2 fw-normal text-center font-weight-bold header-text">Contact Me</h1>
+        <div class="card card_3">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Android Dev
                     </div>
-                </header>
-                <div style="text-align: center;">
-                    <p class="good-text">Mail Me On: <br>
-                        <span class="badge rounded-pill text-bg-light">choubey.anubhav253@gmail.com</span>
-                    </p>
-                    <p class="good-text">Connect With Me <br></p>
-                    <a href="https://www.linkedin.com/in/anubhav-choubey/">
-                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                            <img src="static/images/linkedin.svg" style="width: 30px; height:30px;" alt="GitHub Icon">
-                        </span>
-                    </a>
-                    <a href="https://www.kaggle.com/choubeyanubhav">
-                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                            <img src="static/images/kaggle.svg" style="width: 30px; height:30px;" alt="GitHub Icon">
-                        </span>
-                    </a>
-                    <a href="https://github.com/LazyyVenom">
-                        <span class="badge bigger-badge rounded-pill text-bg-secondary">
-                            <img src="static/images/github.svg" style="width: 30px; height:30px;" alt="GitHub Icon">
-                        </span>
-                    </a>
+                    <i class="fa-brands fa-flutter icon"></i>
+                    <div class="skill_details">
+                        Flutter, Dart, Firebase
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <span class="mb-3 mb-md-0 text-body-primary">Made by Anubhav Choubey</span>
+        <div class="card card_4">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Web Automation
+                    </div>
+                    <i class="fa-solid fa-robot icon"></i>
+                    <div class="skill_details">
+                        Python-Selenium
+                    </div>
                 </div>
-            </footer>
+            </div>
         </div>
-        <script
-            src="https://cdn.anychart.com/releases/8.12.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-        <script
-            src="https://cdn.anychart.com/releases/8.12.1/js/anychart-polar.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-        <script
-            src="https://cdn.anychart.com/releases/8.12.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-        <script
-            src="https://cdn.anychart.com/releases/8.12.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-        <script>
-            anychart.onDocumentReady(function () {
-                var data = [
-                  ["Communication", 14],
-                  ["Ability to Learn", 15],
-                  ["Programming", 15],
-                  ["Data Related Work", 13],
-                  ["Artificial Intelligence", 11],
-                  ["Automation", 14],
-                  ["Web Development", 12],
-                  ["Computer Related Work", 13],
-                  ["Application Development", 11]
-                ];
-            
-                // create a chart
-                var chart = anychart.polar();
-            
-                // create a polygon series and set the data
-                var series = chart.polygon(data);
-            
-                // set the type of the x-scale
-                chart.xScale("ordinal");
-            
-                // enable sorting points by x
-                chart.sortPointsByX(true);
-                series.name("Anubhav Choubey");
-                series.normal().fill("#ff5757", 0.4);
-                series.hovered().fill("#ff5757", 0.3);
-                series.selected().fill("#ff5757", 0.6);
-                series.normal().stroke("#ff5757", 1, "10 5", "round");
-                series.hovered().stroke("#ff5757", 2, "10 5", "round");
-                series.selected().stroke("#ff5757", 4, "10 5", "round");
-              
-                chart.background().fill("transparent");
-
-                // set the text color and weight for the labels
-                series.labels().fontColor("#ff5757").fontWeight("bold");
-
-                // set the inner radius
-                chart.innerRadius(50);
-            
-                // set the container id
-                chart.container("container");
-            
-                // initiate drawing the chart
-                chart.draw();
-            });
-        </script>
-
-        <script>
-            function scrollToSection(sectionId) {
-                var section = document.getElementById(sectionId);
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                    setActiveNavLink(sectionId);
-                }
-            }
-
-            function setActiveNavLink(sectionId) {
-                var navLinks = document.querySelectorAll('.nav-link');
-                navLinks.forEach(function (link) {
-                    if (link.getAttribute('onclick').includes(sectionId)) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            }
-            window.addEventListener('load', function () {
-                var introElement = document.getElementById('intro');
-                if (introElement) {
-                    introElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        </script>
-        <script>
-            // Initialize Bootstrap Carousel
-            document.addEventListener("DOMContentLoaded", function () {
-                var carousels = document.querySelectorAll('[data-mdb-carousel-init]');
-                carousels.forEach(function (carousel) {
-                    new mdb.Carousel(carousel);
-                });
-            });
-        </script>
-        
+        <div class="card card_5">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Web Scraping
+                    </div>
+                    <i class="fa-solid fa-clone icon"></i>
+                    <div class="skill_details">
+                        Selenium, BS4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card_6">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Game Dev
+                    </div>
+                    <i class="fa-solid fa-gamepad icon"></i>
+                    <div class="skill_details">
+                        PyGame
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card_7">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        ML, DL & AI
+                    </div>
+                    <i class="fa-solid fa-gears icon"></i>
+                    <div class="skill_details">
+                        ML, DL, Prompting, AI, LLM, CV, NLP
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card_8">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Coding Langs
+                    </div>
+                    <i class="fa-solid fa-laptop-code icon"></i>
+                    <div class="skill_details">
+                        Python, Dart
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card_9">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Data Management
+                    </div>
+                    <i class="fa-solid fa-database icon"></i>
+                    <div class="skill_details">
+                        SQL, MySQL, Pandas
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card_10">
+            <div class="card_flip">
+                <div class="flip_inner">
+                    <div class="skills_heading">
+                        Utilities (Others)
+                    </div>
+                    <i class="fa-solid fa-terminal icon"></i>
+                    <div class="skill_details">
+                        Git, Github, Docker, Terminal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,217 @@
+/* Setting Up for jack of all trades Screen */
+
+.jack_of_all_trades {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6.5vh;
+    flex-wrap: wrap;
+    position: absolute;
+    border-radius: 1%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    text-align: center;
+    height: 95%;
+}
+
+.animate {
+    display: flex;
+    animation-play-state: running;
+}
+
+.jack_of_all_trades .animate .cards {
+    animation-play-state: running;
+}
+
+.cards, .golden_card, .locator, .card {
+    cursor: pointer;
+}
+
+.card_flip {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #363636;
+    border-radius: 5%;
+    height: 100%;
+    width: 100%;
+    animation: appear_slowly 0.5s ease ;
+}
+
+.flip_inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #363636;
+    height: 86%;
+    width: 74%;
+}
+
+.skills_heading {
+    font-size:4vh;
+    font-weight: bold;
+}
+
+.skill_details {
+    font-size: 2.5vh;
+}
+
+.skill_details, .skills_heading {
+    padding: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon {
+    font-size: 10vh;
+}
+
+.card {
+    position: relative;
+    height: 40vh;
+    width: 28vh;
+    border-radius: 5%;
+    background-image: url('../images/card_normal.png') ;
+    background-size: cover;
+    filter: drop-shadow(0vh 2vh 5vh #222);
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    filter: drop-shadow(0vh 0vh 1.2vh #fff);
+}
+
+.card_1 {
+    animation: card_start_1 1s ease-out;
+}
+
+.card_2 {
+    animation: card_start_2 1s ease-out;
+}
+
+.card_3 {
+    animation: card_start_3 1s ease-out;
+}
+
+.card_4 {
+    animation: card_start_4 1s ease-out;
+}
+
+.card_5 {
+    animation: card_start_5 1s ease-out;
+}
+
+.card_6 {
+    animation: card_start_6 1s ease-out;
+}
+
+.card_7 {
+    animation: card_start_7 1s ease-out;
+}
+
+.card_8 {
+    animation: card_start_8 1s ease-out;
+}
+
+.card_9 {
+    animation: card_start_9 1s ease-out;
+}
+
+.card_10 {
+    animation: card_start_10 1s ease-out;
+}
+
+/* Animations */
+@keyframes appear_slowly {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes card_start_1 {
+    0% {
+        transform: translate(28vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_2 {
+    0% {
+        transform: translate(12vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_3 {
+    0% {
+        transform: translate(-2vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_4 {
+    0% {
+        transform: translate(-27vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_5 {
+    0% {
+        transform: translate(-57vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_6 {
+    0% {
+        transform: translate(28vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_7 {
+    0% {
+        transform: translate(12vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_8 {
+    0% {
+        transform: translate(-2vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_9 {
+    0% {
+        transform: translate(-27vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_10 {
+    0% {
+        transform: translate(-57vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
